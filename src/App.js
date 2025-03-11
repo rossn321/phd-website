@@ -4,6 +4,9 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
 import Publications from './pages/Publications';
+import Talks from './pages/Talks';
+import Awards from './pages/Awards';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -15,7 +18,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/publications" element={<Publications />} />
-            {/* Add other routes */}
+            <Route path="/talks" element={<Talks />} />
+            <Route path="/awards" element={<Awards />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
       </div>
