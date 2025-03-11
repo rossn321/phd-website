@@ -1,0 +1,155 @@
+/* src/pages/About.css */
+.about-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+  }
+  
+  .profile-section {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+  }
+  
+  .profile-image {
+    flex: 0 0 200px;
+  }
+  
+  .placeholder-image {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #666;
+  }
+  
+  .profile-details {
+    flex: 1;
+  }
+  
+  .profile-details h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .profile-details .title {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-details .university,
+  .profile-details .department {
+    color: #666;
+    margin: 0.25rem 0;
+  }
+  
+  .social-links {
+    margin-top: 1rem;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #0066cc;
+  }
+  
+  .bio-section,
+  .research-section,
+  .education-section {
+    margin-bottom: 2rem;
+  }
+  
+  .bio-section h3,
+  .research-section h3,
+  .education-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #444;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+  
+  .bio-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .research-section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .research-section li {
+    margin-bottom: 0.5rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .education-item {
+    margin-bottom: 1rem;
+  }
+  
+  .education-item .degree {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #444;
+  }
+  
+  .education-item .institution {
+    color: #555;
+    margin-bottom: 0.25rem;
+  }
+  
+  .education-item .years {
+    color: #777;
+    font-style: italic;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .about-page {
+      padding: 1rem;
+    }
+    
+    .profile-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+    
+    .profile-image {
+      flex: initial;
+    }
+    
+    .placeholder-image {
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .social-links a {
+      margin: 0;
+    }
+  }
