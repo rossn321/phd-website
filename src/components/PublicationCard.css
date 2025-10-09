@@ -1,0 +1,118 @@
+.publication-card {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    display: flex;
+    position: relative;
+  }
+  
+  .publication-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+  
+  .publication-year {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--space-md);
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  .publication-content {
+    padding: var(--space-lg);
+    flex: 1;
+  }
+  
+  .publication-card h3 {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+  }
+  
+  .publication-card:hover h3 {
+    color: var(--color-secondary);
+  }
+  
+  .authors {
+    color: var(--color-gray-700);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .journal {
+    color: var(--color-gray-600);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+  }
+  
+  .doi {
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-md);
+    font-size: 0.9rem;
+  }
+  
+  .doi a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+  
+  .abstract-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal);
+  }
+  
+  .abstract-container.expanded {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .abstract {
+    background-color: var(--color-gray-100);
+    padding: var(--space-md);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-gray-700);
+    margin: var(--space-md) 0;
+    line-height: 1.6;
+  }
+  
+  .publication-actions {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+  
+  .btn-text {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: var(--space-sm) 0;
+    transition: color var(--transition-fast);
+    text-decoration: underline;
+  }
+  
+  .btn-text:hover {
+    color: var(--color-secondary);
+  }
+  
+  @media (max-width: 768px) {
+    .publication-card {
+      flex-direction: column;
+    }
+    
+    .publication-year {
+      width: 100%;
+      padding: var(--space-sm);
+    }
+  }
