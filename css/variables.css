@@ -38,38 +38,33 @@
     --transition-fast: 150ms ease;
     --transition-normal: 300ms ease;
     --transition-slow: 500ms ease;
-
 }
 
+/* Dark Mode */
 .dark-mode {
-    /* Softer, more muted colors for dark mode */
-    --color-primary: #4a6d9a;          /* Muted blue */
-    --color-primary-light: #5d7ea8;    /* Slightly lighter muted blue */
-    --color-secondary: #b36d4d;        /* Muted orange/rust */
-    --color-accent: #5a8c70;           /* Muted green */
-    
-    /* Dark mode grays - darker base with smoother progression */
-    --color-gray-100: #121212;         /* Background */
-    --color-gray-200: #1a1a1a;         /* Slightly lighter background */
-    --color-gray-300: #242424;         /* Card backgrounds, etc. */
-    --color-gray-400: #333333;         /* Borders, dividers */
-    --color-gray-500: #555555;         /* Disabled text */
-    --color-gray-600: #777777;         /* Secondary text */
-    --color-gray-700: #aaaaaa;         /* Primary text */
-    --color-gray-800: #cccccc;         /* Headings */
-    --color-gray-900: #eeeeee;         /* High emphasis text */
-    
-    /* Base variables */
+    --color-primary: #4a6d9a;
+    --color-primary-light: #5d7ea8;
+    --color-secondary: #b36d4d;
+    --color-accent: #5a8c70;
+
+    --color-gray-100: #121212;
+    --color-gray-200: #1a1a1a;
+    --color-gray-300: #242424;
+    --color-gray-400: #333333;
+    --color-gray-500: #555555;
+    --color-gray-600: #777777;
+    --color-gray-700: #aaaaaa;
+    --color-gray-800: #cccccc;
+    --color-gray-900: #eeeeee;
+
     --background-color: var(--color-gray-100);
     --text-color: var(--color-gray-700);
     --card-background: var(--color-gray-300);
-    
+
     color-scheme: dark;
 }
 
-/* Dark mode specific styles for components */
-
-/* Header */
+/* Dark mode component overrides */
 .dark-mode .header {
     background-color: var(--color-gray-200);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -93,7 +88,6 @@
     color: var(--color-primary-light);
 }
 
-/* Cards and sections */
 .dark-mode .hero {
     background: linear-gradient(135deg, var(--color-gray-300) 0%, var(--color-gray-200) 100%);
 }
@@ -118,7 +112,6 @@
     color: var(--color-gray-900);
 }
 
-/* Card backgrounds */
 .dark-mode .profile-section,
 .dark-mode .bio-section,
 .dark-mode .research-section,
@@ -129,12 +122,13 @@
 .dark-mode .talk-card,
 .dark-mode .award-card,
 .dark-mode .contact-card,
-.dark-mode .contact-form-container {
+.dark-mode .contact-info-container,
+.dark-mode .upcoming-talks,
+.dark-mode .other-recognition {
     background-color: var(--card-background);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer */
 .dark-mode .footer {
     background-color: var(--color-gray-300);
 }
@@ -149,4 +143,14 @@
 
 .dark-mode .footer-bottom p {
     color: var(--color-gray-600);
+}
+
+.dark-mode .theme-toggle:hover {
+    background-color: var(--color-gray-700);
+}
+
+@media (max-width: 1024px) {
+    .dark-mode .nav {
+        background-color: var(--color-gray-900);
+    }
 }

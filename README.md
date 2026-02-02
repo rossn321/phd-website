@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Bhargavi Ganesh - Academic Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple static website for an academic/research professional. No build tools or dependencies required.
 
-## Available Scripts
+## Structure
 
-In the project directory, you can run:
+```
+├── index.html          # Home page
+├── about.html          # About/bio page
+├── publications.html   # Publications list
+├── talks.html          # Talks & presentations
+├── awards.html         # Awards & honors
+├── contact.html        # Contact information
+├── css/
+│   ├── variables.css   # Colors, fonts, spacing
+│   ├── base.css        # Reset, typography, buttons
+│   ├── components.css  # Header, footer, cards
+│   └── pages.css       # Page-specific styles
+├── js/
+│   ├── theme.js        # Dark/light mode toggle
+│   ├── menu.js         # Mobile menu
+│   ├── search.js       # Publications search
+│   ├── animations.js   # Scroll animations
+│   └── router.js       # Smooth page transitions
+└── assets/             # Images, documents
+```
 
-### `npm start`
+## Running Locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Option 1: Open directly**
+- Double-click `index.html` to open in browser
+- Note: Page transitions won't work with `file://` protocol
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Option 2: Local server (recommended)**
+```bash
+npx serve
+```
+Then open http://localhost:3000
 
-### `npm test`
+## What to Update
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Personal Info (all pages)
+Search and replace across all HTML files:
+- `bg@ed.ac.uk` → your email
+- `Room 1000000` → your office
+- `https://linkedin.com` → your LinkedIn URL
+- `href="#"` near Google Scholar → your Google Scholar URL
 
-### `npm run build`
+### Profile Photo (about.html)
+Replace the placeholder with an image:
+```html
+<!-- Change this: -->
+<div class="placeholder-image">BG</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- To this: -->
+<img src="assets/photo.jpg" alt="Your Name" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;">
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Publications (publications.html)
+Each publication is a `<div class="publication-card">` block. Copy/paste and edit for each publication. Update the `data-title`, `data-authors`, `data-abstract` attributes (lowercase) for search to work.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Talks (talks.html)
+Each talk is a `<div class="talk-card">` block. Update or remove as needed. Replace `href="#"` with actual slide/video URLs.
 
-### `npm run eject`
+### Awards (awards.html)
+Replace placeholder awards with real ones. Each award is a `<div class="award-card">` block within a year group.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This is a static site - upload all files to any web host:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **GitHub Pages**: Push to a repo, enable Pages in settings
+- **Netlify**: Drag and drop the folder
+- **University hosting**: Upload via FTP/SFTP
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Features
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Responsive design (mobile-friendly)
+- Dark/light mode (auto-detects system preference, saves choice)
+- Smooth page transitions
+- Publications search/filter
+- Scroll-triggered animations
